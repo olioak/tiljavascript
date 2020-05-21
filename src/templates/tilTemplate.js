@@ -17,7 +17,7 @@ const TilTemplate = ({ data }) => {
 export default TilTemplate
 
 export const query = graphql`
-  query PostsBySlug($slug: String!) {
+  query TILsBySlug($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
       frontmatter {
