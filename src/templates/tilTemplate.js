@@ -7,8 +7,7 @@ const TilTemplate = ({ data }) => {
   const { frontmatter, body } = data.mdx
   return (
     <Layout>
-      <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.date}</p>
+      <h2>{frontmatter.title}</h2>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   )
@@ -22,7 +21,6 @@ export const query = graphql`
       body
       frontmatter {
         title
-        date(formatString: "YYYY MMMM Do")
       }
     }
   }

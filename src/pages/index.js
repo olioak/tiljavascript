@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import Dump from "../components/Dump"
+// import Dump from "../components/dump"
 
 const IndexWrapper = styled.main``
-const PostWrapper = styled.div``
+const TILWrapper = styled.div``
 
 const IndexPage = ({ data }) => {
   return (
@@ -16,13 +15,13 @@ const IndexPage = ({ data }) => {
       {/* <Dump data={data} /> */}
       <IndexWrapper>
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => (
-          <PostWrapper key={id}>
+          <TILWrapper key={id}>
             <Link to={fields.slug}>
               <h1>{frontmatter.title}</h1>
             </Link>
-            <p>{frontmatter.date}</p>
+
             <p>{excerpt}</p>
-          </PostWrapper>
+          </TILWrapper>
         ))}
       </IndexWrapper>
     </Layout>
@@ -34,7 +33,7 @@ export default IndexPage
 export const query = graphql`
   query SITE_INDEX_QUERY {
     allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___order], order: ASC }
       filter: { frontmatter: { published: { eq: true } } }
     ) {
       nodes {
@@ -42,7 +41,7 @@ export const query = graphql`
         excerpt
         frontmatter {
           title
-          date
+          order
         }
         fields {
           slug
