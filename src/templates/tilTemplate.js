@@ -1,14 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import TIL from "../components/TIL"
 import Layout from "../components/layout"
 
 const TilTemplate = ({ data }) => {
-  const { frontmatter, body } = data.mdx
   return (
     <Layout>
-      <h2>{frontmatter.title}</h2>
-      <MDXRenderer>{body}</MDXRenderer>
+      <TIL data={data.mdx} />
     </Layout>
   )
 }
@@ -21,6 +19,10 @@ export const query = graphql`
       body
       frontmatter {
         title
+        rarity
+      }
+      fields {
+        slug
       }
     }
   }

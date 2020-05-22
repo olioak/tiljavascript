@@ -1,9 +1,10 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import Dump from "../components/dump"
+import TIL from "../components/TIL"
+//  import Dump from "../components/dump"
 
 const IndexWrapper = styled.main``
 const TILWrapper = styled.div``
@@ -11,16 +12,12 @@ const TILWrapper = styled.div``
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" />
       {/* <Dump data={data} /> */}
+      <SEO title="Home" />
       <IndexWrapper>
-        {data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => (
+        {data.allMdx.nodes.map(({ id, body, frontmatter, fields }) => (
           <TILWrapper key={id}>
-            <Link to={fields.slug}>
-              <h1>{frontmatter.title}</h1>
-            </Link>
-
-            <p>{excerpt}</p>
+            <TIL data={{ frontmatter, body, fields }} />
           </TILWrapper>
         ))}
       </IndexWrapper>
@@ -38,10 +35,11 @@ export const query = graphql`
     ) {
       nodes {
         id
-        excerpt
+        body
         frontmatter {
           title
           order
+          rarity
         }
         fields {
           slug
