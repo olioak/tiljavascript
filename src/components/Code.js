@@ -1,8 +1,35 @@
 import React from "react"
 import Highlight, { defaultProps } from "prism-react-renderer"
-import theme from "prism-react-renderer/themes/nightOwlLight"
+import theme from "prism-react-renderer/themes/nightOwl"
+import styled from "styled-components"
+import { copyToClipboard } from "../utils/copyToCliboard"
+
+export const Pre = styled.pre`
+  border-radius: 6px;
+  overflow-x: auto;
+  position: relative;
+`
+
+const CopyCode = styled.button`
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border: 0;
+  border-radius: 3px;
+  background: #ebecf0;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+`
 
 const Code = ({ codeString, language }) => {
+  const handleClick = () => {
+    copyToClipboard(codeString)
+  }
+
   return (
     <Highlight
       {...defaultProps}
@@ -11,7 +38,8 @@ const Code = ({ codeString, language }) => {
       theme={theme}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={style}>
+        <Pre className={className} style={style}>
+          <CopyCode onClick={handleClick}>Copy</CopyCode>
           {tokens.map((line, i) => (
             <div {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
@@ -19,7 +47,7 @@ const Code = ({ codeString, language }) => {
               ))}
             </div>
           ))}
-        </pre>
+        </Pre>
       )}
     </Highlight>
   )
