@@ -40,6 +40,7 @@ export const query = graphql`
           title
           order
           rarity
+          categories
         }
         fields {
           slug

@@ -1,10 +1,9 @@
 import React from "react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
-import Layout from "./layout"
 
-const TIL = props => {
-  const { frontmatter, body, fields } = props.data
+const TIL = ({ data }) => {
+  const { frontmatter, body, fields } = data
   return (
     <>
       <Link to={fields.slug}>
@@ -12,6 +11,9 @@ const TIL = props => {
       </Link>
       <p>{frontmatter.rarity}</p>
       <MDXRenderer>{body}</MDXRenderer>
+      {frontmatter.categories.map((category, idx) => {
+        return <div key={idx}>{category}</div>
+      })}
     </>
   )
 }

@@ -20,6 +20,7 @@ export const query = graphql`
       frontmatter {
         title
         rarity
+        categories
       }
       fields {
         slug
