@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => {
   `
 
   const StyledLink = styled(Link)`
-    color: ${palette.yellow[400]};
+    color: ${palette.red[400]};
     text-transform: uppercase;
     text-decoration: none;
     &:hover {

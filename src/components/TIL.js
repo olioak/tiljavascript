@@ -2,6 +2,7 @@ import React from "react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 
+
 const TIL = ({ data }) => {
   const { frontmatter, body, fields } = data
   return (
