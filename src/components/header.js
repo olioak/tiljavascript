@@ -1,38 +1,50 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
-import styled from "styled-components"
+import React, { useContext } from "react"
+import styled, { ThemeContext } from "styled-components"
 
-const Wrapper = styled.header`
-  background: #2c2c2c;
-  margin-bottom: 32px;
-  text-align: center;
-  padding: 32px;
-`
+const Header = ({ siteTitle }) => {
+  const theme = useContext(ThemeContext)
+  const { palette, spacing, screens, fontSize } = theme
 
-const Inner = styled.div`
-  margin: 0 auto;
-  max-width: 800px;
-  text-transform: uppercase;
-`
+  const Wrapper = styled.header`
+    background: ${palette.gray[800]};
+    margin-bottom: ${spacing[8]};
+    padding-top: ${spacing[2]};
+    padding-bottom: ${spacing[2]};
+    text-align: center;
+  `
 
-const StyledLink = styled(Link)`
-  color: white;
-  text-decoration: none;
-  &:hover {
-    color: lightgreen;
-  }
-`
+  const Inner = styled.div`
+    margin: 0 auto;
+    max-width: ${screens.sm};
+  `
 
-const Header = ({ siteTitle }) => (
-  <Wrapper>
-    <Inner>
-      <StyledLink to="/">
-        <h1>{siteTitle}</h1>
-      </StyledLink>
-    </Inner>
-  </Wrapper>
-)
+  const StyledLink = styled(Link)`
+    color: ${palette.yellow[400]};
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      color: ${palette.gray[100]};
+    }
+  `
+
+  const Title = styled.h1`
+    font-size: ${fontSize["3xl"]};
+    margin: 0;
+    padding: 16px;
+  `
+
+  return (
+    <Wrapper>
+      <Inner>
+        <StyledLink to="/">
+          <Title>{siteTitle}</Title>
+        </StyledLink>
+      </Inner>
+    </Wrapper>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
