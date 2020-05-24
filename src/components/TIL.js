@@ -71,7 +71,7 @@ const Tag = styled.div`
 `
 
 const ReferencesContainer = styled.div`
-  padding: ${p => p.theme.spacing[4]};
+  padding: ${p => p.theme.spacing[4]} ${p => p.theme.spacing[5]};
 `
 
 const ReferencesToggle = styled.button`
@@ -79,10 +79,11 @@ const ReferencesToggle = styled.button`
   background-color: ${p => p.theme.palette.gray[200]};
   text-align: right;
   border: none;
+  cursor: pointer;
   flex: 1;
   padding: 0 ${p => p.theme.spacing[2]};
   &:focus {
-    outline: none; /* not happy with this (a11y), but not sure how to improve it*/    
+    outline: none; /* not happy with this (a11y), but not sure how to improve it*/
   }
 `
 
@@ -90,6 +91,11 @@ const TagsAndToggle = styled.div`
   display: flex;
   align-items: center;
   padding: ${p => p.theme.spacing[2]};
+`
+
+const Reference = styled.a`
+  color: ${p => p.theme.palette.blue[600]};
+  text-decoration: none;
 `
 
 const Chevron = styled.span`
@@ -102,6 +108,11 @@ const Chevron = styled.span`
       padding: ${p => p.theme.spacing[1]};
     `
   }}
+`
+
+const Splitter = styled.span`
+  margin: ${p => p.theme.spacing[4]};
+  color: ${p => p.theme.palette.gray[500]};
 `
 
 const TIL = ({ data }) => {
@@ -146,10 +157,13 @@ const TIL = ({ data }) => {
         {showReferences && (
           <ReferencesContainer>
             {frontmatter.references.map((ref, idx) => {
+              const [description, link] = ref.split(":")
+
               return (
-                <div key={idx}>
-                  {ref.split(":")[0]} - {ref.split(":")[1]}
-                </div>
+                <span key={idx}>
+                  {idx > 0 && <Splitter>●</Splitter>}
+                  <Reference href={link}>{description}</Reference>
+                </span>
               )
             })}
           </ReferencesContainer>
