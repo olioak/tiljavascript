@@ -8,6 +8,7 @@ export const Pre = styled.pre`
   overflow-x: auto;
   position: relative;
   margin-bottom: 0;
+  font-size: ${p =>p.theme.fontSize.default};
 `
 
 const CopyCode = styled.button`

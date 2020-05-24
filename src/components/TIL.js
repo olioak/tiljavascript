@@ -47,10 +47,10 @@ const RarityTag = styled.span`
     return css`
       background-color: ${bg};
       color: ${color};
-      padding: 0 ${spacing[2]};
+      padding: ${spacing[1]} ${spacing[3]};
       margin: ${spacing[4]};
       margin-right: ${spacing[1]};
-      border-radius: ${borderRadius.lg};
+      border-radius: ${borderRadius.md};
       display: inline-block;
       font-size: ${fontSize.sm};
     `
@@ -62,10 +62,9 @@ const Tag = styled.div`
     background-color: ${palette.white};
     border: 1px solid ${palette.gray[400]};
     color: ${palette.gray[800]};
-    padding: 0 ${spacing[2]};
+    padding: ${spacing[1]} ${spacing[3]};
     margin: ${spacing[1]};
-    border-radius: ${borderRadius.lg};
-
+    border-radius: ${borderRadius.md};
     font-size: ${fontSize.sm};
   `}
 `
