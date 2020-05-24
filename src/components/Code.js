@@ -5,21 +5,20 @@ import styled from "styled-components"
 import { copyToClipboard } from "../utils/copyToCliboard"
 
 export const Pre = styled.pre`
-  border-radius: 6px;
   overflow-x: auto;
   position: relative;
+  margin-bottom: 0;
 `
 
 const CopyCode = styled.button`
   position: absolute;
-  right: 12px;
-  top: 12px;
+  right: 16px;
+  top: 16px;
   border: 0;
-  border-radius: 3px;
   background: #ebecf0;
   margin: 0;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.6;
   &:hover {
     opacity: 1;
   }

@@ -17,7 +17,7 @@ import styled from "styled-components"
 
 const Wrapper = styled.main`
   margin: 0 auto;
-  max-width: ${props => props.theme.screens.sm};
+  max-width: ${props => props.theme.screens.md};
   padding: 0 1.0875rem 1.45rem;
 `
 

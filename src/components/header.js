@@ -6,14 +6,15 @@ import styled from "styled-components"
 const Wrapper = styled.header`
   background: ${p => p.theme.palette.gray[800]};
   margin-bottom: ${p => p.theme.spacing[8]};
-  padding-top: ${p => p.theme.spacing[2]};
-  padding-bottom: ${p => p.theme.spacing[2]};
-  text-align: center;
+  padding-left: ${p => p.theme.spacing[8]};
+  box-shadow: ${p => p.theme.boxShadow.md};
+  letter-spacing: 0.45em;
+  border-bottom: 8px solid ${p => p.theme.palette.yellow[400]};
 `
 
 const Inner = styled.div`
   margin: 0 auto;
-  max-width: ${p => p.theme.screens.sm};
+  max-width: ${p => p.theme.screens.md};
 `
 
 const StyledLink = styled(Link)`
@@ -21,7 +22,7 @@ const StyledLink = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   &:hover {
-    color: ${p => p.theme.palette.gray[100]};
+    color: ${p => p.theme.palette.yellow[300]};
   }
 `
 

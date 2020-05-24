@@ -2,6 +2,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background: #cbd5e0; /* gray-300 */
 }
 body {
   margin: 0;
@@ -187,7 +188,7 @@ textarea {
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 * {
   box-sizing: inherit;
