@@ -23,10 +23,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
-const Body = styled.div`
-  // padding-bottom: ${p => p.theme.spacing[8]};
-  
-  `
+const Body = styled.div``
 
 // Hack to pad markdown.
 const FixedMarkdown = styled.div`
@@ -37,22 +34,27 @@ const FixedMarkdown = styled.div`
 `
 
 const RarityTag = styled.span`
-  ${({ theme: { palette, spacing, borderRadius, fontSize } }) => css`
-    background-color: ${p => {
-      if (p.rarity === "rare") return palette.orange[400]
-      return palette.blue[400]
-    }};
-    color: ${p => {
-      if (p.rarity === "rare") return palette.orange[800]
-      return palette.blue[800]
-    }};
-    padding: 0 ${spacing[2]};
-    margin: ${spacing[4]};
-    margin-right: ${spacing[1]};
-    border-radius: ${borderRadius.lg};
-    display: inline-block;
-    font-size: ${fontSize.sm};
-  `}
+  ${props => {
+    const { palette, spacing, borderRadius, fontSize } = props.theme
+    let bg = palette.blue[400]
+    let color = palette.blue[800]
+
+    if (props.rarity === "rare") {
+      bg = palette.orange[400]
+      color = palette.orange[800]
+    }
+
+    return css`
+      background-color: ${bg};
+      color: ${color};
+      padding: 0 ${spacing[2]};
+      margin: ${spacing[4]};
+      margin-right: ${spacing[1]};
+      border-radius: ${borderRadius.lg};
+      display: inline-block;
+      font-size: ${fontSize.sm};
+    `
+  }}
 `
 
 const Tag = styled.span`
