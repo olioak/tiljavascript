@@ -8,6 +8,17 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            variants: [`400`, `600`],
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {},
     },
