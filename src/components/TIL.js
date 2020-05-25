@@ -89,7 +89,7 @@ const ReferencesToggle = styled.button`
 const TagsAndToggle = styled.div`
   display: flex;
   align-items: center;
-  padding: ${p => p.theme.spacing[2]};
+  padding: ${p => p.theme.spacing[1]};
 `
 
 const Reference = styled.a`
