@@ -37,7 +37,7 @@ const Title = styled.h1`
 `
 
 // Something weird with this menu. The hot reload doesn't work.
-const StyledMenu = styled(MenuButton)`
+const StyledMenuButton = styled(MenuButton)`
   display: flex;
   margin: 0 ${p => p.theme.spacing[4]};
   fill: ${p => p.theme.palette.yellow[400]};
@@ -58,8 +58,9 @@ const Header = ({ siteTitle }) => {
     <Wrapper>
       <Inner>
         <Menu>
-          <StyledMenu>
+          <StyledMenuButton aria-label="Menu">
             <svg
+              
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -67,7 +68,7 @@ const Header = ({ siteTitle }) => {
             >
               <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
             </svg>
-          </StyledMenu>
+          </StyledMenuButton>
 
           <StyledMenuList>
             <MenuLink as={Link} to="/">
