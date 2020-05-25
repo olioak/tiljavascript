@@ -4,11 +4,12 @@ import theme from "prism-react-renderer/themes/nightOwlLight"
 import styled from "styled-components"
 import { copyToClipboard } from "../utils/copyToCliboard"
 
+// TODO: Put them inside the theme
 export const Pre = styled.pre`
   overflow-x: auto;
   position: relative;
   margin-bottom: 0;
-  font-size: ${p =>p.theme.fontSize.default};
+  font-size: 16px;
 `
 
 const CopyCode = styled.button`

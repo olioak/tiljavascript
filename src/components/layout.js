@@ -17,7 +17,7 @@ import styled from "styled-components"
 
 const Wrapper = styled.main`
   font-family: Montserrat, Georgia;
-  font-size: ${p => p.theme.fontSize.default};
+  font-size: ${p => p.theme.fontSize.base};
   line-height: 1.5;
   color: ${p => p.theme.palette.gray[800]};
   margin: 0 auto;

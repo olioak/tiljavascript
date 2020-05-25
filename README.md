@@ -2,6 +2,12 @@
 
 https://www.freecodecamp.org/news/build-a-developer-blog-from-scratch-with-gatsby-and-mdx/
 
+# MDX
+
+- Put a space between the key and value:
+  categories:[bla] does not work
+  categories: [bla] works
+
 # Decision Log
 
 I left the css that came with Gatsby and changed the background. Maybe there's something interesting there.
