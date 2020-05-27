@@ -103,7 +103,9 @@ const TIL = ({ data, showReferences = false }) => {
   return (
     <Wrapper>
       <Title>
-        <StyledLink to={fields.slug}>{frontmatter.title}</StyledLink>
+        <StyledLink to={fields.slug}>
+          #{frontmatter.order} {frontmatter.title}
+        </StyledLink>
       </Title>
       <Body>
         <FixedMarkdown>
