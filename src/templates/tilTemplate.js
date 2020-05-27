@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 const TilTemplate = ({ data }) => {
   return (
     <Layout>
-      <TIL data={data.mdx} />
+      <TIL data={data.mdx} showReferences />
     </Layout>
   )
 }
