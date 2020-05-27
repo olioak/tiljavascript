@@ -1,7 +1,7 @@
-import React from "react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Link } from "gatsby"
-import styled, { css } from "styled-components"
+import React from "react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import { Link } from "gatsby";
+import styled, { css } from "styled-components";
 
 const Wrapper = styled.div`
   background: ${p => p.theme.palette.gray[200]};
@@ -9,21 +9,21 @@ const Wrapper = styled.div`
   overflow: hidden; /* clip the border radius */
   margin-bottom: ${p => p.theme.spacing[8]};
   box-shadow: ${p => p.theme.boxShadow.md};
-`
+`;
 
 const Title = styled.h1`
   text-transform: uppercase;
   padding: ${p => p.theme.spacing[4]};
   background: ${p => p.theme.palette.yellow[400]};
   font-size: ${p => p.theme.fontSize.xl};
-`
+`;
 
 const StyledLink = styled(Link)`
   color: ${p => p.theme.palette.gray[800]};
   text-decoration: none;
-`
+`;
 
-const Body = styled.div``
+const Body = styled.div``;
 
 // Hack to pad markdown.
 const FixedMarkdown = styled.div`
@@ -32,17 +32,20 @@ const FixedMarkdown = styled.div`
     padding-left: ${p => p.theme.spacing[4]};
     padding-right: ${p => p.theme.spacing[4]};
   }
-`
+  & code {
+    background: ${p => p.theme.palette.gray[500]};
+  }
+`;
 
 const RarityTag = styled.span`
   ${props => {
-    const { palette, spacing, borderRadius, fontSize } = props.theme
-    let bg = palette.blue[400]
-    let color = palette.blue[800]
+    const { palette, spacing, borderRadius, fontSize } = props.theme;
+    let bg = palette.blue[400];
+    let color = palette.blue[800];
 
     if (props.rarity === "rare") {
-      bg = palette.orange[400]
-      color = palette.orange[800]
+      bg = palette.orange[400];
+      color = palette.orange[800];
     }
 
     return css`
@@ -54,9 +57,9 @@ const RarityTag = styled.span`
       border-radius: ${borderRadius.md};
       display: inline-block;
       font-size: ${fontSize.sm};
-    `
+    `;
   }}
-`
+`;
 
 const Tag = styled.div`
   ${({ theme: { palette, spacing, borderRadius, fontSize } }) => css`
@@ -68,34 +71,34 @@ const Tag = styled.div`
     border-radius: ${borderRadius.md};
     font-size: ${fontSize.sm};
   `}
-`
+`;
 
 const ReferencesContainer = styled.div`
   padding: ${p => p.theme.spacing[4]} ${p => p.theme.spacing[5]};
-`
+`;
 
 const Tags = styled.div`
   display: flex;
   align-items: center;
   padding: ${p => p.theme.spacing[1]};
-`
+`;
 
 const Reference = styled.a`
   color: ${p => p.theme.palette.blue[600]};
   text-decoration: none;
-`
+`;
 
 const Splitter = styled.span`
   margin: ${p => p.theme.spacing[4]};
   color: ${p => p.theme.palette.gray[500]};
-`
+`;
 
 const ReferencesTitle = styled.h2`
   margin: ${p => p.theme.spacing[4]} 0;
-`
+`;
 
 const TIL = ({ data, showReferences = false }) => {
-  const { frontmatter, body, fields } = data
+  const { frontmatter, body, fields } = data;
 
   return (
     <Wrapper>
@@ -112,27 +115,27 @@ const TIL = ({ data, showReferences = false }) => {
             {frontmatter.rarity}
           </RarityTag>
           {frontmatter.categories.map((category, idx) => {
-            return <Tag key={idx}>{category}</Tag>
+            return <Tag key={idx}>{category}</Tag>;
           })}
         </Tags>
         {showReferences && (
           <ReferencesContainer>
             <ReferencesTitle>References</ReferencesTitle>
             {frontmatter.references.map((ref, idx) => {
-              const [description, link] = ref.split(":")
+              const [description, link] = ref.split(":");
 
               return (
                 <span key={idx}>
                   {idx > 0 && <Splitter>●</Splitter>}
                   <Reference href={link}>{description}</Reference>
                 </span>
-              )
+              );
             })}
           </ReferencesContainer>
         )}
       </Body>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default TIL
+export default TIL;
