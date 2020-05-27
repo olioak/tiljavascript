@@ -22,6 +22,7 @@ export const query = graphql`
         rarity
         categories
         references
+        order
       }
       fields {
         slug
