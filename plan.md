@@ -1,0 +1,151 @@
+-- how to run javascript
+-- console.log
+-- line after line (exceptions later explained)
+-- many instructions in one line
+-- semicolons ;
+-- comments
+-- multiline comments
+-- string
+- number inside a string (think excel formats)
+- strange strings: empty, numbers, console.log
+- double quotes inside single quotes
+- single quotes inside double quotes
+- escape " and '
+- escape sequences
+- add and subtract
+- mult and divide
+- concatenate: join text
+- variables var
+- made of numbers, letters \$ and \_. no spaces or start with number
+- assign var
+- assign var from other var
+- vars are case sensitive, use camelCase
+- unassigned var shows undefined
+- += strings
+- boolean true/false on/off, yes/no
+- if: return "yes" or "no" depending on argument
+- if inside if
+- else
+- else if
+- order in ifs
+- if and return early instead of if else if
+- === equality, 1===1 , false: 1==="1"
+- !==
+- &&
+- ||
+- ">" 5 > 3: true, 5 > "3": true, 2 > 3: false
+- ">="
+- "<"
+- "<="
+- == equality, converts value, different from =, 1 == 1, 1 =="1"
+- !=
+- !
+- store strings on array
+- store strings and numbers on array
+- access arrays with []
+- modify arrays with []
+- append: add item to array on the right with push
+- add array inside array
+- get and remove item from right with pop
+- get and remove item from left with shift (left->shiFtpop<-right)
+- prepend: add item to array on the left with unshift (left->unpush<-right)
+- nest/sub/multi-dimensional: array inside another array
+- access nested arrays with []
+- "bla " + var + " ble" (watch spaces)
+- string length (number of characters)
+- string length not ok when utf8 has len 2?
+- [] get first charactes on string
+- [] get n character on string
+- [] get last character on string
+- [] get penultimate character on string
+- function: logs hello world (console.log is also a function)
+- pass values to function
+- function return value
+- function returns undefined (when there is no return defined)
+- if: inside function
+- assign value to var with return from function
+- return boolean from functions (return directly)
+- object: like dictionaries that can point to values, arrays, other dics, functions
+- object: with dot notation
+- object: with brackets (if you have spaces on name)
+- object: with brackets (and variables)
+- object: updating with dot notation
+- object: updating with brackets
+- object: add new property dot
+- object: add new property brackets
+- object: delete property
+- object: lookup (like dictionary: a: alpha, b: bravo, ...)
+- object: check if it has property with hasOwnProperty https://stackoverflow.com/questions/17150396/benefit-of-using-object-hasownproperty-vs-testing-if-property-is-undefined/29272601
+- object: accessing different parts of an object with . or [](nested)
+- object: storing objects around (the linkage crap)
+- i++
+- i--
+- while: print something (draw flow)
+- while: infinite loop
+- while: push to array
+- for: push to array (transform a while into a for and draw the flow)
+- for: odd numbers (adding 2 by 2)
+- for: odd numbers (but check with %)
+- for: count backwards
+- for: count jumping 2 by 2
+- for: go through an array (iterate)
+- for inside for
+- do ... while (draw flow)
+- decimal aka floating point numbers or floats
+- rounding errors (not only js)
+- decimals work like whole numbers
+- divide decimal
+- remainder
+- x+=2 (commutative)
+- x-=3 (commutative)
+- x\*=2 (commutative)
+- x /= 2 (not commutative)
+- scope: global (no var)
+- scope: window
+- scope: funtion parameters
+- scope: inside function
+- scope: inside if
+- scope: inside for
+- scope: inside {}
+- scope: inside switch
+- scope: local in func, global and parameter with the same name
+- string immutability
+- switch
+- switch with default
+- switch with several cases doing the same
+- comparing to boolean
+- array: access nested array [{arr:[]}, ...]
+- recursion
+- generate random fractions
+- math.floor
+- generate random whole numbers
+- parseInt
+- ternary operator (convert)
+- ternary inside ternary
+
+# _MISC_
+
+- string literal vs string object (after?)
+- explain ASI rules?
+- show ascii art in console?
+
+- scope: area where a variable is visible
+- arguments/parameters: values passed into function (inputs)
+- call/invoke: run
+- prepend: add to the left or top file
+- append: add to the right or end of file
+- bracket notation: access stuff to theright with square brackets []
+- immutable: value doesnt change after being assigned
+- x & y are tightly coupled: x very dependent on y (or y on x)
+- concatenate: join text
+- sub-array: array inside an array
+- sub-anything: x inside x
+- nested = inside
+- multi-dimensional: normally arrays and inside each other
+- iterate = repeat
+- increment = add
+- decrement = subtract
+
+- no negation operator
+
+# fcc bugs
