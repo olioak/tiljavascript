@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import TIL from "../components/TIL"
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import TIL from "../components/TIL";
 //  import Dump from "../components/dump"
 
 const IndexPage = ({ data }) => {
@@ -18,10 +18,10 @@ const IndexPage = ({ data }) => {
         ))}
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query SITE_INDEX_QUERY {
@@ -45,4 +45,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
