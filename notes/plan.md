@@ -6,12 +6,12 @@
 -- comments
 -- multiline comments
 -- string
-- number inside a string (think excel formats)
+-- quotes inside double quotes: escape " and '
+-- should i use single or double quotes
 - strange strings: empty, numbers, console.log
-- double quotes inside single quotes
-- single quotes inside double quotes
-- escape " and '
 - escape sequences
+- number inside a string (think excel formats)
+
 - add and subtract
 - mult and divide
 - concatenate: join text
@@ -122,9 +122,18 @@
 - parseInt
 - ternary operator (convert)
 - ternary inside ternary
+- next steps
+  - free code camp
+  - wesbos js30
+  - vscode
+  - html and css
+  - git
+  - react
+  - show video of how i built the til
 
 # _MISC_
 
+- back quotes and show example with stuff inside ``
 - string literal vs string object (after?)
 - explain ASI rules?
 - show ascii art in console?
