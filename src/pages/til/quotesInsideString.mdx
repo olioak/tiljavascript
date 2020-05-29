@@ -1,0 +1,23 @@
+---
+published: true
+order: 11
+categories: [freeCodeCamp]
+title: How to put quotes inside a string in JavaScript
+rarity: common
+references:
+  [
+    "Basic JavaScript:https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript",
+    "When to use single or double quotes:https://stackoverflow.com/questions/242813/when-to-use-double-or-single-quotes-in-javascript"
+  ]
+videoNotes:
+- show example where you don't escape the string and JS gets confused
+---
+If you need to put quotes inside a string, you put a backslash `\` before the double or single quote:
+- Single quote is `\'`
+- Double quote is `\"`
+
+You need to do this because if you don't do it, JavaScript is going to think the string is over before it really is.
+
+```javascript
+console.log("JavaScript \"thinks\" with its \'engine\'.");
+```
