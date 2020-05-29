@@ -8,6 +8,18 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 const path = require(`path`);
 const kebabCase = require(`lodash.kebabcase`);
 
+// FUTURE TODO: Check if I can remove this.
+// https://stackoverflow.com/questions/56093598/react-dom-patch-is-not-detected-react-16-6-features-may-not-work
+exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
+  const config = getConfig();
+  if (stage.startsWith("develop") && config.resolve) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "react-dom": "@hot-loader/react-dom",
+    };
+  }
+};
+
 /**
  * Converts a title to a slug.
  * It lowercases it first or it will convert JavaScript to java-script.
