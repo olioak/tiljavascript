@@ -3,6 +3,8 @@
 - maybe instead of the user marking the tils with a checkmark, visited tils could have a checkmark
 - have previous/next on individual tils
 - have related tils on individual til?
+- write the code, avoid copy. the copy button is there for when you come back and are in a hurry
+
 
 # guidelines
 is it important now? later or out of scope?
