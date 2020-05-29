@@ -1,0 +1,3 @@
+[[plugins]]
+package = "netlify-plugin-a11y"
+resultMode = "warn" # is "error" by default
