@@ -8,6 +8,13 @@ https://www.freecodecamp.org/news/build-a-developer-blog-from-scratch-with-gatsb
   categories:[bla] does not work
   categories: [bla] works
 
+# Installs
+
+Test netlify builds locally, to catch errors locally
+
+- ONCE: npm install @netlify/build -g
+- > cd src && netlify-build
+
 # Decision Log
 
 The names of the files are annoying... I'm just going to number them and if there is a TIl to put in the middle, I'll just make a script or something to fix them...
