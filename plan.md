@@ -6,6 +6,7 @@
 -- comments
 -- multiline comments
 -- string
+
 - number inside a string (think excel formats)
 - strange strings: empty, numbers, console.log
 - double quotes inside single quotes
@@ -147,5 +148,3 @@
 - decrement = subtract
 
 - no negation operator
-
-# fcc bugs
