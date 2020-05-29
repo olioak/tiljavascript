@@ -52,7 +52,6 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const tils = result.data.allMdx.nodes;
-    console.log(tils[0].fields.slug);
 
     // create page for each mdx file
     tils.forEach(til => {

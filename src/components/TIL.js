@@ -99,11 +99,12 @@ const ReferencesTitle = styled.h2`
 
 const TIL = ({ data, showReferences = false }) => {
   const { frontmatter, body, fields } = data;
+  const slug = "/" + fields.slug;
 
   return (
     <Wrapper>
       <Title>
-        <StyledLink to={fields.slug}>
+        <StyledLink to={slug}>
           #{frontmatter.order} {frontmatter.title}
         </StyledLink>
       </Title>
@@ -123,8 +124,10 @@ const TIL = ({ data, showReferences = false }) => {
         {showReferences && (
           <ReferencesContainer>
             <ReferencesTitle>References</ReferencesTitle>
-            {frontmatter.references.map((ref, idx) => {
-              const [description, link] = ref.split(":");
+            {frontmatter.references.map((referenceStr, idx) => {
+              const firstColonIdx = referenceStr.indexOf(":");
+              const description = referenceStr.substr(0, firstColonIdx);
+              const link = referenceStr.substr(firstColonIdx + 1);
 
               return (
                 <span key={idx}>
