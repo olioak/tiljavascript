@@ -46,14 +46,19 @@ exports.createPages = ({ actions, graphql }) => {
   const tilTemplate = path.resolve("src/templates/tilTemplate.js");
 
   return graphql(`
-    {
-      allMdx {
+    query PAGES {
+      allMdx(
+        sort: { fields: [frontmatter___order], order: ASC }
+        filter: { frontmatter: { published: { eq: true } } }
+      ) {
         nodes {
-          fields {
-            slug
-          }
+          id
           frontmatter {
             title
+            order
+          }
+          fields {
+            slug
           }
         }
       }
@@ -66,12 +71,15 @@ exports.createPages = ({ actions, graphql }) => {
     const tils = result.data.allMdx.nodes;
 
     // create page for each mdx file
-    tils.forEach(til => {
+    tils.forEach((til, idx) => {
+      console.log(idx === 0 ? null : tils[idx - 1])
       createPage({
         path: til.fields.slug,
         component: tilTemplate,
         context: {
           slug: til.fields.slug,
+          prev: idx === 0 ? null : tils[idx - 1],
+          next: idx === tils.length - 1 ? null : tils[idx + 1],
         },
       });
     });
