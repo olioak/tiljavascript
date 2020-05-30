@@ -2,20 +2,26 @@
 published: true
 order: 10
 categories: [freeCodeCamp]
-title: What is a string in JavaScript?
+title: Which types of quotes should I use with a string in JavaScript
 rarity: common
 references:
   [
     "Basic JavaScript:https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript",
+    "When to use single or double quotes:https://stackoverflow.com/questions/242813/when-to-use-double-or-single-quotes-in-javascript",
   ]
 videoNotes:
-  - hmm
+  - show what happens if you put double inside souble
+  - mention projects usually just have one type of quotes for consistency
+  - vscode can force only one type
 ---
 
-A string in JavaScript is text. But because code is text too, when you _really_ need to write text in code, you use quotes. Like this: `"I am text"`.
+Sometimes you will see a string that starts and ends with `"` or starts and ends with `'`. Which one should you choose?
 
-Notice the double quotes to the left and right of the text. You can use double quotes or single quotes. The difference will be explained later.
+It doesn't matter.
+
+There is a difference though: You can put **single quotes** inside **double quote strings** and you can put **double quotes** inside **single quote strings**.
 
 ```javascript
-console.log("I was text all along!");
+console.log('This string can have double quotes "inside" it.');
+console.log("This string can have single quotes 'inside' it.");
 ```

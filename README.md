@@ -10,10 +10,13 @@ https://www.freecodecamp.org/news/build-a-developer-blog-from-scratch-with-gatsb
 
 # Installs
 
+## Not working for now, try to make it work later...
+
+https://github.com/sw-yx/netlify-plugin-a11y/issues/3
 Test netlify builds locally, to catch errors locally
 
 - ONCE: npm install @netlify/build -g
-- > cd src && netlify-build
+- cd src && netlify-build
 
 # Decision Log
 
