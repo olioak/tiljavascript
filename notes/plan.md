@@ -8,10 +8,6 @@
 -- string
 -- quotes inside double quotes: escape " and '
 -- should i use single or double quotes
-- strange strings: empty, numbers, console.log
-- escape sequences
-- number inside a string (think excel formats)
-
 - add and subtract
 - mult and divide
 - concatenate: join text
@@ -132,7 +128,9 @@
   - show video of how i built the til
 
 # _MISC_
-
+- number inside a string (think excel formats)
+- escape sequences
+- strange strings: empty, numbers, console.log
 - back quotes and show example with stuff inside ``
 - string literal vs string object (after?)
 - explain ASI rules?

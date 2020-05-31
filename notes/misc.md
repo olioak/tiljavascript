@@ -20,3 +20,25 @@ is it important now? later or out of scope?
 
 - html or htm? use just one. not importnat
 - which names can a page have? not important, if learner puts something wrong, it will not work
+- story tell it
+
+
+# about
+The descriptions are 280 characters long. The code has no limit. 
+Even if the code has not restriction, because the description is short, the code naturally stays small.
+
+I avoid describing exceptions and just describe the main point. I will put a note to describe the exceptions later.
+
+I cant offer many alternatives or the text becomes long.
+
+# guidelines
+
+
+
+# instead
+- common instead of typical
+
+# avoid:
+- normally
+- just
+- this, that
