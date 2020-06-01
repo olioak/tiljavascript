@@ -2,14 +2,15 @@ import React from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { Link } from "gatsby";
 import styled, { css } from "styled-components";
+import Card from "./card";
 
-const Wrapper = styled.div`
-  background: ${p => p.theme.palette.gray[200]};
-  border-radius: ${p => p.theme.borderRadius.md};
-  overflow: hidden; /* clip the border radius */
-  margin-bottom: ${p => p.theme.spacing[8]};
-  box-shadow: ${p => p.theme.boxShadow.md};
-`;
+// const Wrapper = styled.div`
+//   background: ${p => p.theme.palette.gray[200]};
+//   border-radius: ${p => p.theme.borderRadius.md};
+//   overflow: hidden; /* clip the border radius */
+//   margin-bottom: ${p => p.theme.spacing[8]};
+//   box-shadow: ${p => p.theme.boxShadow.md};
+// `;
 
 const Title = styled.h1`
   text-transform: uppercase;
@@ -102,7 +103,7 @@ const TIL = ({ data, showReferences = false }) => {
   const slug = "/" + fields.slug;
 
   return (
-    <Wrapper>
+    <Card>
       <Title>
         <StyledLink to={slug}>
           #{frontmatter.order} {frontmatter.title}
@@ -139,7 +140,7 @@ const TIL = ({ data, showReferences = false }) => {
           </ReferencesContainer>
         )}
       </Body>
-    </Wrapper>
+    </Card>
   );
 };
 

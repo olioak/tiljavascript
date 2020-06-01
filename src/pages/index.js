@@ -1,9 +1,17 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import styled from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import TIL from "../components/TIL";
-//  import Dump from "../components/dump"
+import Card from "../components/card";
+// import Dump from "../components/dump"
+
+const StyledLink = styled(Link)`
+  display: block;
+  text-decoration: none;
+  padding: ${p => p.theme.spacing[4]} ${p => p.theme.spacing[8]};
+  font-size: ${p => p.theme.fontSize.lg};
+`;
 
 const IndexPage = ({ data }) => {
   return (
@@ -11,11 +19,13 @@ const IndexPage = ({ data }) => {
       {/* <Dump data={data} /> */}
       <SEO title="Home" />
       <main>
-        {data.allMdx.nodes.map(({ id, body, frontmatter, fields }) => (
-          <div key={id}>
-            <TIL data={{ frontmatter, body, fields }} />
-          </div>
-        ))}
+        <Card>
+          {data.allMdx.nodes.map(({ id, body, frontmatter, fields }) => (
+            <StyledLink to={"/" + fields.slug} key={id}>
+              {frontmatter.title}
+            </StyledLink>
+          ))}
+        </Card>
       </main>
     </Layout>
   );
