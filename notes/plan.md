@@ -8,7 +8,8 @@
 -- string
 -- quotes inside double quotes: escape " and '
 -- should i use single or double quotes
-- add and subtract
+-- add
+-- subtract
 - mult and divide
 - concatenate: join text
 - variables var

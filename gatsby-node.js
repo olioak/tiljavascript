@@ -72,7 +72,6 @@ exports.createPages = ({ actions, graphql }) => {
 
     // create page for each mdx file
     tils.forEach((til, idx) => {
-      console.log(idx === 0 ? null : tils[idx - 1])
       createPage({
         path: til.fields.slug,
         component: tilTemplate,
