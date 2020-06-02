@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
         <Card>
           {data.allMdx.nodes.map(({ id, body, frontmatter, fields }) => (
             <StyledLink to={"/" + fields.slug} key={id}>
-              {frontmatter.title}
+              #{frontmatter.order} - {frontmatter.title}
             </StyledLink>
           ))}
         </Card>

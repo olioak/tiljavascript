@@ -10,15 +10,17 @@
 -- should i use single or double quotes
 -- add
 -- subtract
-- mult and divide
-- concatenate: join text
-- variables var
+-- mult
+-- divide
+-- concatenate: join text
+-- declare variable in javascript
+- store a value in a variable in javascript
+- concatenate variable and string
 - made of numbers, letters \$ and \_. no spaces or start with number
 - assign var
 - assign var from other var
 - vars are case sensitive, use camelCase
 - unassigned var shows undefined
-- += strings
 - boolean true/false on/off, yes/no
 - if: return "yes" or "no" depending on argument
 - if inside if
@@ -97,6 +99,7 @@
 - x-=3 (commutative)
 - x\*=2 (commutative)
 - x /= 2 (not commutative)
+- += strings
 - scope: global (no var)
 - scope: window
 - scope: funtion parameters
@@ -129,6 +132,7 @@
   - show video of how i built the til
 
 # _MISC_
+- add string with number
 - number inside a string (think excel formats)
 - escape sequences
 - strange strings: empty, numbers, console.log

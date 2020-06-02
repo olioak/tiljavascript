@@ -1,6 +1,8 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
-import Code from "./src/components/Code" // some issue with code file lowercase on netlify?
+// some issue with code file lowercase on netlify
+// if the file is changed to lowercase "code" it'll blow up even after clean deploy
+import Code from "./src/components/Code"
 
 const components = {
   pre: ({ children: { props } }) => {
