@@ -1,23 +1,22 @@
-# todo
-- create courses: start with beginner javascript?
-- copying shows "copied" for half a second
-- publish "making of website in 2020" on C:\Users\artur\Dropbox\My PC (DESKTOP-7QBUSEU)\Documents\Camtasia Studio
-  - do comments on the video instead of keeping the "wing it" audio.
-- filter (by checkbox, categories, rarity)
-- work on mobile
-- check what's going on with the title when on a single til?
-- maybe instead of the user marking the tils with a checkmark, visited tils could have a checkmark
-- have related tils on individual til?
+This is the paste bin.
 
 # guidelines
+
+- i took more than 2h to write the "declare variables"... If I was a PS4, you would be listening to my fans in overdrive...
+- You can always improve later. It's not the end of the world if a title is not good
+- check the use of I/You/We. It's messy
+- you need to do -> you do
+- try to add "!" and fix const on the basic js curriculum in fcc
+- improve mdn? https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#Initializing_a_variable
+- see code? or check code?
 
 - story tell it
 
 ## Is it important now?
 
+- write camel case?
 - html or htm? use just one. not importnat
 - which names can a page have? not important, if learner puts something wrong, it will not work
-
 
 # about
 
@@ -29,6 +28,8 @@ I avoid describing exceptions and just describe the main point. I will put a not
 I cant offer many alternatives or the text becomes long.
 
 # writing
+
+- direct: instead of "by writing" say "you write"
 
 ## instead
 
@@ -46,6 +47,8 @@ from everybody writes:
 - Despite the fact that → Although
 
 ## avoid:
+
+- saying to the reader to "check this for more info". Because they will and then they are flooded with new knowledge. The readers are already doing what you ask, so if you tell them to check the link, it's likely they will. Having the references with low focus is good enough.
 
 - normally
 - just

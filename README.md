@@ -20,6 +20,8 @@ Test netlify builds locally, to catch errors locally
 
 # Decision Log
 
+
+
 The names of the files are annoying... I'm just going to number them and if there is a TIl to put in the middle, I'll just make a script or something to fix them...
 
 I'm going to write titles to fit with TIL. Like "TIL how to add numbers in JS".

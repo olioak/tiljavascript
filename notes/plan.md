@@ -38,7 +38,7 @@
 - "<="
 - == equality, converts value, different from =, 1 == 1, 1 =="1"
 - !=
-- !
+- ! (extra)
 - store strings on array
 - store strings and numbers on array
 - access arrays with []
@@ -57,6 +57,7 @@
 - [] get n character on string
 - [] get last character on string
 - [] get penultimate character on string
+- explain only one value inside var (AFTER ARRAYS)
 - function: logs hello world (console.log is also a function)
 - pass values to function
 - function return value
@@ -132,6 +133,7 @@
   - show video of how i built the til
 
 # _MISC_
+- TIL you can add many empty lines
 - add string with number
 - number inside a string (think excel formats)
 - escape sequences
