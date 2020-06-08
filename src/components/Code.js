@@ -1,8 +1,8 @@
-import React from "react"
-import Highlight, { defaultProps } from "prism-react-renderer"
-import theme from "prism-react-renderer/themes/nightOwlLight"
-import styled from "styled-components"
-import { copyToClipboard } from "../utils/copyToCliboard"
+import React from "react";
+import Highlight, { defaultProps } from "prism-react-renderer";
+import theme from "prism-react-renderer/themes/nightOwlLight";
+import styled from "styled-components";
+import { copyToClipboard } from "../utils/copyToCliboard";
 
 // TODO: Put them inside the theme
 export const Pre = styled.pre`
@@ -10,26 +10,29 @@ export const Pre = styled.pre`
   position: relative;
   margin-bottom: 0;
   font-size: 16px;
-`
+  overflow: visible;
+`;
 
 const CopyCode = styled.button`
   position: absolute;
-  right: 16px;
-  top: 16px;
+  right: 20px;
+  top: -12px;
   border: 0;
   background: #ebecf0;
+  border: 1px solid gray;
+  border-radius: 4px;
   margin: 0;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.5;
   &:hover {
-    opacity: 1;
+    opacity: 0.8;
   }
-`
+`;
 
 const Code = ({ codeString, language }) => {
   const handleClick = () => {
-    copyToClipboard(codeString)
-  }
+    copyToClipboard(codeString);
+  };
 
   return (
     <Highlight
@@ -51,7 +54,7 @@ const Code = ({ codeString, language }) => {
         </Pre>
       )}
     </Highlight>
-  )
-}
+  );
+};
 
-export default Code
+export default Code;

@@ -34,7 +34,7 @@ const FixedMarkdown = styled.div`
     padding-right: ${p => p.theme.spacing[4]};
   }
   & code {
-    background: ${p => p.theme.palette.gray[500]};
+    background: ${p => p.theme.palette.yellow[400]};
   }
 `;
 
