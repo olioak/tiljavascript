@@ -1,0 +1,27 @@
+---
+published: true
+order: 25
+categories: [freeCodeCamp]
+title: JavaScript variables are case sensitive
+rarity: common
+references:
+  [
+    "Basic JavaScript:https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript",
+  ]
+videoNotes:
+---
+
+JavaScript is case sensitive. This means that letters are different if their size is different even if they are the same letter.
+
+For instance, the variable `hi` is different from the variable `Hi`.
+
+```js
+var hi = "hi";
+var Hi = "Hi!!";
+var bye = "Bye Bye";
+
+console.log(hi); // Shows "hi"
+console.log(Hi); // Shows "Hi!!"
+console.log(bye); // Shows "Bye Bye"
+console.log(Bye); // Shows an error saying Bye is not defined
+```

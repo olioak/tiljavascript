@@ -1,5 +1,9 @@
 This is the paste bin.
 
+# tools
+- Use ngram to see the usage of words/sentences
+- Use google keyword planner to see how people tend to think of titles
+
 # guidelines
 
 - i took more than 2h to write the "declare variables"... If I was a PS4, you would be listening to my fans in overdrive...

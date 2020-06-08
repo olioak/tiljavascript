@@ -1,0 +1,34 @@
+---
+published: true
+order: 26
+categories: [freeCodeCamp]
+title: How to copy a variable to another variable
+rarity: common
+references:
+  [
+    "Basic JavaScript:https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript",
+  ]
+videoNotes:
+---
+
+Like physical containers, sometimes you need to put the content of a container into another container.
+
+You do this by using the (`=`) as you use for initalization.
+
+The following expression means you copy the value in b and put it into a:
+`b = a`.
+
+```js
+var sunny = "sunny!";
+var rainy = "rainy!";
+var weather;
+
+console.log(weather); // Shows undefined.
+
+weather = rainy; // Copy sunny variable into sunny.
+console.log(rainy); // Shows "rainy!", rainy didn't change.
+console.log(weather); // Shows "rainy!"
+
+weather = sunny; // Copy rainy variable into sunny.
+console.log(weather); // Shows "sunny!"
+```
