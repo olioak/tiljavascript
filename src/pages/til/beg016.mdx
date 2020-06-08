@@ -1,8 +1,8 @@
 ---
 published: true
-order: 15
+order: 16
 categories: [freeCodeCamp]
-title: Declare variables in JavaScript
+title: What are variables in JavaScript
 rarity: common
 references:
   [
@@ -11,16 +11,18 @@ references:
 videoNotes:
 ---
 
-Instead of writing the same text many times, we store it in a variable and then  we use the variable instead of the text.
+A variable is a container that stores a single value, like the text "hello".
+Variables have many uses. A common use is to avoid repeating the same text over and over again like in the example below.
 
-For that, we:
+No need to understand the code below, details are explained later.
 
-1. Declare a variable<br/>
-2. Store the text on the variable (see next TIL)
+```js
+var sentence = "All work and no play makes Jack a dull boy";
 
-To declare a variable, you write `var` followed by a name.
-
-```javascript
-// The variable someText is being declared on the line below.
-var someText;
+// Show the same sentence 5 times in the console.
+console.log(sentence);
+console.log(sentence);
+console.log(sentence);
+console.log(sentence);
+console.log(sentence);
 ```

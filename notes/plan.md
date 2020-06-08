@@ -13,14 +13,20 @@
 -- mult
 -- divide
 -- concatenate: join text
--- declare variable in javascript
-- store a value in a variable in javascript
-- concatenate variable and string
-- made of numbers, letters \$ and \_. no spaces or start with number
-- assign var
-- assign var from other var
-- vars are case sensitive, use camelCase
-- unassigned var shows undefined
+-- variables
+-- declare variables;
+-- initialize variables
+-- initialize and declare in 1 line
+-- updating a variable
+-- how to not get frustrated with vars (do not think they are simple. they have many rules)
+-- variable types
+-- assign from expression/operation: x = 1 + 1
+-- valid names
+-- case sensitive
+-- assign var to another var
+-- swap vars
+
+- use vars (concat and add)
 - boolean true/false on/off, yes/no
 - if: return "yes" or "no" depending on argument
 - if inside if
@@ -133,6 +139,12 @@
   - show video of how i built the til
 
 # _MISC_
+
+- try to initialize variable that doesnt exist (scope)
+- a variable is like an address to a container for non-primitive values (arrs, fns, objs).
+- variables aren't the values, they are the containers for the values (think a bag contains a rock but the bag is not a rock )
+- "Throughout this article, you'll be asked to type in lines of code to test your understanding of the content."
+
 - TIL you can add many empty lines
 - add string with number
 - number inside a string (think excel formats)

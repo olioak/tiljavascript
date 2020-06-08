@@ -1,82 +1,6 @@
--- variables
--- declare variables;
--- initialize variables
--- initialize and declare in 1 line
--- updating a variable
--- how to not get frustrated with vars (do not think they are simple. they have many rules)
--- variable types
--- assign from expression/operation: x = 1 + 1
--- valid names
--- case sensitive
 
-- assign var to another var
-- swap vars
-- concatenate str with var
 
-- try to initialize variable that doesnt exist
-- a variable is like an address to a container for non-primitive values (arrs, fns, objs).
-- variables aren't the values, they are the containers for the values (think a bag contains a rock but the bag is not a rock )
-- "Throughout this article, you'll be asked to type in lines of code to test your understanding of the content."
 
-# TIL What is a variable in JavaScript
-
-A variable is a container that stores a single value, like the text "hello".
-Variables have many uses. A common use is to avoid repeating the same text over and over again like in the example below.
-
-No need to understand the code below. Details are explained next.
-
-```js
-var sentence = "All work and no play makes Jack a dull boy";
-
-// Show the same sentence 5 times in the console.
-console.log(sentence);
-console.log(sentence);
-console.log(sentence);
-console.log(sentence);
-console.log(sentence);
-```
-
-# TIL How to declare a variable in JavaScript
-
-Before using a variable, we need to create a variable by giving it a name. We call this **declaring a variable**.
-
-We declare a variable by writing `var` followed by a name we choose. Like in this example:
-
-```js
-// The variable below is called food.
-var food;
-```
-
-# TIL How to initialize a variable in JavaScript
-
-After you declare a variable, you can store data in it.
-We call storing data in a variable **initializing a variable**.
-
-You do this by typing the variable name, followed by ( `=` ), followed by the value you want to give it. Example: `food = "ice cream"` .
-
-You use the variable by typing the variable name and JavaScript will replace the variable by the value stored inside it.
-
-```js
-var food; // We declared the variable food.
-food = "ice cream"; // We initialized food with text "ice cream"
-console.log(food); // The console shows "ice cream".
-```
-
-# TIL How to declare and initialize a variable in one line
-
-Previously we saw how to declare and initialize a variable in 2 lines.
-You can do both things in a single line:
-
-```js
-// Declare and initialize variable in 2 lines:
-var drink1;
-drink1 = "Milkshake";
-
-// Declare and initialize variable in 1 line:
-var drink2 = "Orange juice";
-console.log(drink1);
-console.log(drink2);
-```
 
 # TIL How to update a JavaScript variable
 
@@ -183,10 +107,13 @@ console.log(Bye); // Shows an error saying Bye is not defined
 ```
 
 # TIL How to copy a variable to another variable
-Like physical containers, sometimes you need to put the content of a container into another container. 
 
+Like physical containers, sometimes you need to put the content of a container into another container.
 
+You do this by using the (`=`) as you use for initalization.
 
+The following expression means you copy the value in b and put it into a:
+`b = a`.
 
 ```js
 var sunny = "sunny!";
@@ -202,3 +129,51 @@ console.log(weather); // Shows "rainy!"
 weather = sunny; // Copy rainy variable into sunny.
 console.log(weather); // Shows "sunny!"
 ```
+
+# TIL How to swap variables in JavaScript
+
+If you need to swap the values of 2 variables, you must remember that the previous value is lost.
+
+So what do you have to do? Think how would you swap a glass of water with a glass of wine. You need a third glass.
+
+In our case we need a third variable.
+
+```js
+// The 4 lines below don't work:
+var v1 = 1;
+var v2 = 2;
+v1 = v2; // Now both v1 and v2 have the value 2
+v2 = v1; // There is no change because v2 is the same as v1
+console.log(v1); // Shows 2
+console.log(v2); // Shows 2
+
+// The lines below work:
+var glass1 = "wine";
+var glass2 = "water";
+var glass3;
+
+glass3 = glass1; // glass3 has "wine"
+glass1 = glass2; // Now glass1 has "water"
+glass2 = glass3; // glass2 has "wine"
+console.log(glass1); // Shows "water"
+console.log(glass2); // Shows "wine"
+```
+
+# TIL How to use variables in JavaScript
+
+Variables in JavaScript can be used as the values they contain.
+
+So you can add and concatenate variables like if they were values.
+
+```js
+var x = 1;
+var y = 2;
+var total = x + y; // The `+` is used to add numbers
+console.log(total); // Shows 3
+
+var firstName = "Frank";
+var lastName = "enstein";
+var fullName = firstName + lastName; // The `+` is used to join the text
+console.log(fullName); // Shows Frankenstein
+```
+
