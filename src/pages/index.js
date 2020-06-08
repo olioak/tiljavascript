@@ -9,9 +9,11 @@ import Card from "../components/card";
 const StyledLink = styled(Link)`
   display: block;
   text-decoration: none;
-  padding: ${p => p.theme.spacing[4]} ${p => p.theme.spacing[8]};
+  padding: ${p => p.theme.spacing[2]} ${p => p.theme.spacing[8]};
   font-size: ${p => p.theme.fontSize.lg};
 `;
+
+const padNumber = num => `00${num}`.slice(-3);
 
 const IndexPage = ({ data }) => {
   return (
@@ -22,7 +24,7 @@ const IndexPage = ({ data }) => {
         <Card>
           {data.allMdx.nodes.map(({ id, body, frontmatter, fields }) => (
             <StyledLink to={"/" + fields.slug} key={id}>
-              #{frontmatter.order} - {frontmatter.title}
+              # {padNumber(frontmatter.order)} {frontmatter.title}
             </StyledLink>
           ))}
         </Card>
