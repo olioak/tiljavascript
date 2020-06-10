@@ -1,4 +1,12 @@
+# session 8
+19, 20
+instead of updating without the var, she added the var twice
+# session 7
+16, 17, 18
+
 # session 6
+
+shit vars
 
 # session 5
 
