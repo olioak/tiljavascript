@@ -15,7 +15,7 @@ Like physical containers, sometimes you need to put the content of a container i
 
 You do this by using the (`=`) as you use for initalization.
 
-The following expression means you copy the value in b and put it into a:
+The following expression means you copy the value in a and put it into b:
 `b = a`.
 
 ```js
@@ -25,10 +25,10 @@ var weather;
 
 console.log(weather); // Shows undefined.
 
-weather = rainy; // Copy sunny variable into sunny.
-console.log(rainy); // Shows "rainy!", rainy didn't change.
+weather = rainy; // Copy rainy variable into weather.
+console.log(rainy); // Shows "rainy!"
 console.log(weather); // Shows "rainy!"
 
-weather = sunny; // Copy rainy variable into sunny.
+weather = sunny; // Copy rainy variable into weather.
 console.log(weather); // Shows "sunny!"
 ```

@@ -1,3 +1,15 @@
+- show spacing
+- show "lets recap the terms" you have to probably talk about assign and initialize
+
+# session 11
+25, 26
+
+# session 10
+23, 24
+
+# session 9
+21, 22
+
 # session 8
 19, 20
 instead of updating without the var, she added the var twice
