@@ -49,7 +49,7 @@ const TilTemplate = ({ data, pageContext }) => {
     <>
       <Layout>
         <SEO title={data.mdx.frontmatter.title} />
-        <TIL data={data.mdx} showReferences />
+        <TIL data={data.mdx} />
         <NavContainer>
           {prev && (
             <NavPrev>

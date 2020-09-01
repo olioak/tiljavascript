@@ -98,7 +98,7 @@ const ReferencesTitle = styled.h2`
   margin: ${p => p.theme.spacing[4]} 0;
 `;
 
-const TIL = ({ data, showReferences = false }) => {
+const TIL = ({ data, showReferences = false, showTags = false }) => {
   const { frontmatter, body, fields } = data;
   const slug = "/" + fields.slug;
 
@@ -114,14 +114,17 @@ const TIL = ({ data, showReferences = false }) => {
           <MDXRenderer>{body}</MDXRenderer>
         </FixedMarkdown>
 
-        <Tags>
-          <RarityTag rarity={frontmatter.rarity}>
-            {frontmatter.rarity}
-          </RarityTag>
-          {frontmatter.categories.map((category, idx) => {
-            return <Tag key={idx}>{category}</Tag>;
-          })}
-        </Tags>
+        {showTags && (
+          <Tags>
+            <RarityTag rarity={frontmatter.rarity}>
+              {frontmatter.rarity}
+            </RarityTag>
+            {frontmatter.categories.map((category, idx) => {
+              return <Tag key={idx}>{category}</Tag>;
+            })}
+          </Tags>
+        )}
+
         {showReferences && (
           <ReferencesContainer>
             <ReferencesTitle>References</ReferencesTitle>
