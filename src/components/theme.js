@@ -36,6 +36,9 @@ const theme = {
     "56": "14rem",
     "64": "16rem",
   },
+  fontFamily: {
+    sans: "Montserrat, Georgia",    
+  },
   fontSize: {
     xs: "0.75rem",
     sm: "0.875rem",
@@ -191,6 +194,6 @@ const theme = {
       900: "#702459",
     },
   },
-}
+};
 
-export default theme
+export default theme;

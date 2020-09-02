@@ -1,7 +1,11 @@
-This is sort of a changelog + journal.
+# This is sort of a changelog + journal.
 
 
+## 1
 
+I prefer nextjs and tailwind to gatsby and styled components.
+
+## 0 (initial notes)
 
 The names of the files are annoying... I'm just going to number them and if there is a TIl to put in the middle, I'll just make a script or something to fix them...
 
