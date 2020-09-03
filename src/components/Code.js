@@ -5,14 +5,15 @@ import styled from "styled-components";
 import { copyToClipboard } from "../utils/copyToCliboard";
 
 // TODO: Put them inside the theme
+// DONT USE THEME HERE!
 export const Pre = styled.pre`
   overflow-x: auto;
   position: relative;
   margin-bottom: 0;
   font-size: 16px;
   overflow: visible;
-  border-top: 1px dashed ${p=> p.theme.palette.gray[400]};
-  border-bottom: 1px dashed ${p=> p.theme.palette.gray[400]};
+  border-top: 1px dashed #cbd5e0; //gray-400
+  border-bottom: 1px dashed #cbd5e0; // gray-400
   border-radius: 0;
 `;
 
@@ -20,15 +21,15 @@ const CopyCode = styled.button`
   position: absolute;
   right: 16px;
   top: -15px;  
-  background: ${p=> p.theme.palette.gray[300]};
-  color: ${p=> p.theme.palette.gray[700]};
-  border: 1px solid ${p=> p.theme.palette.gray[400]};
+  background: #e2e8f0; // gray-300
+  color: #4a5568; // gray-700
+  border: 1px solid #cbd5e0; // gray-400
   border-radius: 4px;
   margin: 0;
   cursor: pointer;
   
   &:hover {
-    background: ${p=> p.theme.palette.gray[200]};
+    background: #edf2f7; // // gray-200
   }
 `;
 
