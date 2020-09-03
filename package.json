@@ -1,6 +1,6 @@
 {
   "name": "tiljavascript",
-  "private": true,
+  "private": false,
   "description": "Today I Learned JavaScript",
   "version": "0.1.0",
   "author": "Oli Oak <olioak42@gmail.com>",

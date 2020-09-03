@@ -9,16 +9,12 @@ const Title = styled.h1`
   padding: ${p => p.theme.spacing[12]} ${p => p.theme.spacing[12]};
   color: ${p => p.theme.palette.gray[800]};
   font-family: ${p => p.theme.fontFamily.sans};
-  font-size: ${p => p.theme.fontSize["2xl"]};
-  
+  font-size: ${p => p.theme.fontSize["xl"]};
+  width: 60%; // word wrap ftw
   line-height: 2rem;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 30px;
-
-  b {
-    text-decoration: underline dashed ${p => p.theme.palette.blue[400]};
-  }
+  margin-bottom: 20px;
 `;
 
 const StartContainer = styled.div`
@@ -32,10 +28,11 @@ const Start = styled(Link)`
   box-shadow: ${p => p.theme.boxShadow.default};
   padding: ${p => p.theme.spacing[2]} ${p => p.theme.spacing[6]};
   font-size: ${p => p.theme.fontSize["2xl"]};
-  color: ${p => p.theme.palette.gray[100]};
-  background: ${p => p.theme.palette.blue[500]};
+  font-weight: bold;
+  color: ${p => p.theme.palette.yellow[400]};
+  background: ${p => p.theme.palette.gray[900]};
   border-radius: 4px;
-  margin-bottom: 32px;
+  margin-bottom: 128px;
   text-decoration: none;
 `;
 const Body = styled.main`
@@ -45,13 +42,13 @@ const Body = styled.main`
 
 // TODO: fix layout to work when content bigger than screen.
 const Contact = styled.div`
-  position: fixed;
+  // position: fixed;
   text-align: center;
   bottom: 0;
   left: 0;
   right: 0;
   background: ${p => p.theme.palette.gray[100]};
-  padding: ${p => p.theme.spacing[3]};  
+  padding: ${p => p.theme.spacing[3]};
   a {
     color: ${p => p.theme.palette.blue[700]};
     text-decoration: none;
@@ -75,17 +72,16 @@ const BeginnerPage = () => {
             Learn JavaScript <b>from scratch</b> with <b>tweet sized</b> lessons
           </Title>
           <StartContainer>
-            <Start to="/beginner">Start</Start>
+            <Start to="/javascript-beginner-course">START</Start>
           </StartContainer>
+          <Contact>
+            <a href="https://www.github.com/olioak/jsfighter">github</a>
+            <Divider>•</Divider>
+            <a href="https://www.twitter.com/olioak42">twitter</a>
+            <Divider>•</Divider>
+            <a href="mailto:olioak42@gmail.com">olioak42@gmail.com</a>
+          </Contact>
         </Card>
-
-        <Contact>
-          <a href="https://www.github.com/olioak/jsfighter">github</a>
-          <Divider>•</Divider>
-          <a href="https://www.twitter.com/olioak42">twitter</a>
-          <Divider>•</Divider>
-          <a href="mailto:olioak42@gmail.com">olioak42@gmail.com</a>
-        </Contact>
       </Body>
     </Layout>
   );

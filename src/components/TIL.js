@@ -4,14 +4,6 @@ import { Link } from "gatsby";
 import styled, { css } from "styled-components";
 import Card from "./card";
 
-// const Wrapper = styled.div`
-//   background: ${p => p.theme.palette.gray[200]};
-//   border-radius: ${p => p.theme.borderRadius.md};
-//   overflow: hidden; /* clip the border radius */
-//   margin-bottom: ${p => p.theme.spacing[8]};
-//   box-shadow: ${p => p.theme.boxShadow.md};
-// `;
-
 const Title = styled.h1`
   text-transform: uppercase;
   padding: ${p => p.theme.spacing[4]};
@@ -24,7 +16,15 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const Body = styled.div``;
+const Body = styled.div`
+  padding: ${p => p.theme.spacing[8]} 0;
+  h2 {
+    margin-left: ${p => p.theme.spacing[4]};
+  }
+  li {
+    margin-left: ${p => p.theme.spacing[5]};
+  }
+`;
 
 // Hack to pad markdown.
 const FixedMarkdown = styled.div`

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Card = styled.div`
-  background: ${p => p.theme.palette.gray[100]};
+  background: ${p => p.theme.palette.gray[200]};
   border-radius: ${p => p.theme.borderRadius.md};
   overflow: hidden; /* clip the border radius */
   margin-bottom: ${p => p.theme.spacing[8]};

@@ -11,21 +11,24 @@ export const Pre = styled.pre`
   margin-bottom: 0;
   font-size: 16px;
   overflow: visible;
+  border-top: 1px dashed ${p=> p.theme.palette.gray[400]};
+  border-bottom: 1px dashed ${p=> p.theme.palette.gray[400]};
+  border-radius: 0;
 `;
 
 const CopyCode = styled.button`
   position: absolute;
-  right: 20px;
-  top: -12px;
-  border: 0;
-  background: #ebecf0;
-  border: 1px solid gray;
+  right: 16px;
+  top: -15px;  
+  background: ${p=> p.theme.palette.gray[300]};
+  color: ${p=> p.theme.palette.gray[700]};
+  border: 1px solid ${p=> p.theme.palette.gray[400]};
   border-radius: 4px;
   margin: 0;
   cursor: pointer;
-  opacity: 0.5;
+  
   &:hover {
-    opacity: 0.8;
+    background: ${p=> p.theme.palette.gray[200]};
   }
 `;
 
