@@ -13,22 +13,24 @@ So what do you have to do? Think how would you swap a glass of water with a glas
 In our case we need a third variable.
 
 ```js
-// The 4 lines below don't work:
-var v1 = 1;
-var v2 = 2;
-v1 = v2; // Now both v1 and v2 have the value 2
-v2 = v1; // There is no change because v2 is the same as v1
-console.log(v1); // Shows 2
-console.log(v2); // Shows 2
+<script>
+    // The 4 lines below don't work:
+    var v1 = 1;
+    var v2 = 2;
+    v1 = v2; // Now both v1 and v2 have the value 2
+    v2 = v1; // There is no change because v2 is the same as v1
+    console.log(v1); // Shows 2
+    console.log(v2); // Shows 2
 
-// The lines below work:
-var glass1 = "wine";
-var glass2 = "water";
-var glass3;
+    // The lines below work:
+    var glass1 = "wine";
+    var glass2 = "water";
+    var glass3;
 
-glass3 = glass1; // glass3 has "wine"
-glass1 = glass2; // Now glass1 has "water"
-glass2 = glass3; // glass2 has "wine"
-console.log(glass1); // Shows "water"
-console.log(glass2); // Shows "wine"
+    glass3 = glass1; // glass3 has "wine"
+    glass1 = glass2; // Now glass1 has "water"
+    glass2 = glass3; // glass2 has "wine"
+    console.log(glass1); // Shows "water"
+    console.log(glass2); // Shows "wine"
+</script>
 ```
