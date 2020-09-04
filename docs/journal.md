@@ -1,5 +1,8 @@
 # This is sort of a changelog + journal.
 
+## 2
+
+Gatsby blows up for the weirdest reasons. The auto generated schema is a pain..
 
 ## 1
 

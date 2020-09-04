@@ -53,14 +53,14 @@ const TilTemplate = ({ data, pageContext }) => {
         <NavContainer>
           {prev && (
             <NavPrev>
-              <NavTitle>Previous TIL</NavTitle>
+              <NavTitle>Previous</NavTitle>
               <Prev to={`/${prev.fields.slug}`}>{prev.frontmatter.title}</Prev>
             </NavPrev>
           )}
 
           {next && (
             <NavNext>
-              <NavTitle>Next TIL</NavTitle>
+              <NavTitle>Next</NavTitle>
               <Next to={`/${next.fields.slug}`}>{next.frontmatter.title}</Next>
             </NavNext>
           )}
@@ -78,9 +78,7 @@ export const query = graphql`
       body
       frontmatter {
         title
-        rarity
-        categories
-        references
+        rarity                
         order
       }
       fields {
