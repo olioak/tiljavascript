@@ -42,6 +42,17 @@ const Next = styled(Link)`
   color: ${p => p.theme.palette.blue[600]};
 `;
 
+const Questions = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-top: ${p => p.theme.spacing[6]};
+  font-weight: bold;
+  a {
+    text-decoration: none;
+    color: ${p => p.theme.palette.blue[600]};
+  }
+`;
+
 const TilTemplate = ({ data, pageContext }) => {
   const { prev, next } = pageContext;
 
@@ -65,6 +76,10 @@ const TilTemplate = ({ data, pageContext }) => {
             </NavNext>
           )}
         </NavContainer>
+        <Questions>
+          Questions? Ask me {" "}
+          <a href="https://twitter.com/olioak42">@olioak42</a>
+        </Questions>
       </Layout>
     </>
   );
@@ -78,7 +93,7 @@ export const query = graphql`
       body
       frontmatter {
         title
-        rarity                
+        rarity
         order
       }
       fields {
